@@ -14,11 +14,15 @@ dnf5 install -y emacs
 
 # Use a COPR Example:
 #
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
+dnf5 -y copr enable mecattaf/duoRPM
+dnf5 -y install scroll
 # Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+dnf5 -y copr disable mecattaf/duoRPM
 
+dnf5 -y copr enable dennemann/MangoWC
+dnf5 -y install mangowc
+dnf5 -y install scenefx
+dnf5 -y copr disable dennemann/MangoWC
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
