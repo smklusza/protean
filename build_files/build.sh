@@ -33,7 +33,7 @@ dnf5 -y copr disable dennemann/MangoWC
 dnf5 -y copr enable mecattaf/packages
 dnf5 -y install quickshell-webengine
 # dnf5 -y install dms-greeter
-dnf5 -y disable mecattaf/packages
+dnf5 -y copr disable mecattaf/packages
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
