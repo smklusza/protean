@@ -11,18 +11,29 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y emacs
+dnf5 -y install swaylock
+dnf5 -y install mako
+dnf5 -y install mousepad
+dnf5 -y install grim
+dnf5 -y install slurp
+dnf5 -y install fuzzel
 
-# Use a COPR Example:
-#
+# Grab scroll and sway:
 dnf5 -y copr enable mecattaf/duoRPM
 dnf5 -y install scroll
-# Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable mecattaf/duoRPM
 
+# Grab MangoWC
 dnf5 -y copr enable dennemann/MangoWC
 dnf5 -y install mangowc
 dnf5 -y install scenefx
 dnf5 -y copr disable dennemann/MangoWC
+
+# Grab Quickshell
+dnf5 -y copr enable mecattaf/packages
+dnf5 -y install quickshell-webengine
+# dnf5 -y install dms-greeter
+dnf5 -y disable mecattaf/packages
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
