@@ -11,16 +11,17 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 -y install emacs
-dnf5 -y install swaylock
-dnf5 -y install mako
 dnf5 -y install mousepad
-dnf5 -y install grim
-dnf5 -y install slurp
 dnf5 -y install fuzzel
 dnf5 -y install thunar
 dnf5 -y install thunar-volman
 dnf5 -y remove konsole
 dnf5 -y remove dolphin
+dnf5 -y remove kate
+dnf5 -y remove ark
+dnf5 -y remove spectacle
+dnf5 -y remove kfind
+dnf5 -y remove kwrite
 
 # Grab scroll and sway:
 # dnf5 -y copr enable mecattaf/duoRPM
