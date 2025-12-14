@@ -34,6 +34,12 @@ dnf5 -y remove kwrite
 # dnf5 -y install scenefx
 # dnf5 -y copr disable dennemann/MangoWC
 
+# TUIs
+dnf5 -y copr enable nclundell/fedora-extras
+dnf5 -y install yazi
+dnf5 -y install systemctl-tui
+dnf5 -y copr disable nclundell/fedora-extras
+
 # Grab Quickshell
 dnf5 -y copr enable mecattaf/packages
 dnf5 -y install quickshell-webengine
